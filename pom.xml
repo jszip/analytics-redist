@@ -62,7 +62,7 @@
   </distributionManagement>
 
   <properties>
-    <analytics-branch>7457f417ff0045a76b15adb6f9c67d273fac6e62</analytics-branch>
+    <analytics-branch>c1ad022188be658a912562bc063d504df7c4beb2</analytics-branch>
   </properties>
 
   <build>
@@ -91,7 +91,7 @@
           </execution>
         </executions>
       </plugin>
-      <!--plugin>
+      <plugin>
         <artifactId>maven-verifier-plugin</artifactId>
         <version>1.0</version>
         <executions>
@@ -102,7 +102,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin-->
+      </plugin>
     </plugins>
   </build>
 
