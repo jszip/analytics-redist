@@ -1,0 +1,15 @@
+Analytics.js
+================================
+
+This is a redistribution of [Analytics.js][1].
+
+To use this module in your projects just add the following dependency:
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.artifactId}</artifactId>
+      <version>${project.version}</version>
+      <type>jszip</type>
+    </dependency>
+
+  [1]: http://segmentio.github.com/analytics.js/
