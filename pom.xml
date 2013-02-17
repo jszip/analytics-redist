@@ -62,7 +62,7 @@
   </distributionManagement>
 
   <properties>
-    <analytics-branch>a210ff2bb8637c35dc165894f34938f20100dee6</analytics-branch>
+    <analytics-branch>8af14cd743b937bdfac98d8b42a1443d44b127e2</analytics-branch>
   </properties>
 
   <build>
