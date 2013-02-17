@@ -25,7 +25,7 @@
 
   <groupId>org.jszip.redist</groupId>
   <artifactId>analytics</artifactId>
-  <version>0.4.11-SNAPSHOT</version>
+  <version>0.5.0-SNAPSHOT</version>
   <packaging>jszip</packaging>
 
   <name>Analytics.js</name>
@@ -62,7 +62,7 @@
   </distributionManagement>
 
   <properties>
-    <analytics-branch>26c03af5736c019cca70a87f07f2353ee86054f6</analytics-branch>
+    <analytics-branch>bd0b4362841eedd41736af732e862558e6343dc7</analytics-branch>
   </properties>
 
   <build>
