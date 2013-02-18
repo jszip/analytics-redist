@@ -1,0 +1,2 @@
+UPSTREAM_GIT_URL=git://github.com/segmentio/analytics.js.git
+POM_PROPERTY=analytics-branch
