@@ -16,9 +16,22 @@ else
     cd -
 fi
 
-"$DIR/version-check.sh" "$DIR/target/upstream/package.json" "$DIR/pom.xml"
+JSONVER=$(parse-json "$DIR/target/upstream/package.json")
+if [ $? -ne 0 ] ; then
+    echo "Could not parse $DIR/target/upstream/package.json"
+    exit 255
+fi
 
-if [ $? -lt 2 ] ; then
+POMVER=$(parse-pom "$DIR/pom.xml")
+if [ $? -ne 0 ] ; then
+    echo "Could not parse $DIR/pom.xml"
+    exit 255
+fi
+
+vercomp $POMVER $JSONVER
+if [ $? -eq 2 ] ; then
+    echo "Waiting for a newer release"
+else
     echo "Searching for update..."
     GOOD_REV=$(xpath "$DIR/pom.xml" "/project/properties/$POM_PROPERTY/text()")
     if [ $? -ne 0 ] ; then
