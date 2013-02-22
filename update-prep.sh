@@ -18,7 +18,7 @@ fi
 
 "$DIR/version-check.sh" "$DIR/target/upstream/package.json" "$DIR/pom.xml"
 
-if [ $? -eq 1 ] ; then
+if [ $? -lt 2 ] ; then
     echo "Searching for update..."
     GOOD_REV=$(xpath "$DIR/pom.xml" "/project/properties/$POM_PROPERTY/text()")
     if [ $? -ne 0 ] ; then
