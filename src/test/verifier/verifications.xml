@@ -4,10 +4,6 @@
   <files>
     <file>
       <location>target/classes/analytics.js</location>
-      <contains>^//</contains>
-    </file>
-    <file>
-      <location>target/classes/analytics.js</location>
       <contains>Analytics\.js may be freely distributed under the MIT license</contains>
     </file>
   </files>
