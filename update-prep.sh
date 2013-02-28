@@ -29,7 +29,7 @@ if [ $? -ne 0 ] ; then
 fi
 
 vercomp $POMVER $JSONVER
-if [ $? -eq 2 ] ; then
+if [ $? -eq 1 ] ; then
     echo "Waiting for a newer release"
 else
     echo "Searching for update..."
