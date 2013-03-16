@@ -25,7 +25,7 @@
 
   <groupId>org.jszip.redist</groupId>
   <artifactId>analytics</artifactId>
-  <version>0.8.7-SNAPSHOT</version>
+  <version>0.8.7</version>
   <packaging>jszip</packaging>
 
   <name>Analytics.js</name>
@@ -48,7 +48,7 @@
     <connection>scm:git:git://github.com/jszip/analytics-redist.git</connection>
     <developerConnection>scm:git:git@github.com:jszip/analytics-redist.git</developerConnection>
     <url>http://github.com/jszip/analytics-redist/tree/master/</url>
-    <tag>HEAD</tag>
+    <tag>analytics-0.8.7</tag>
   </scm>
   <issueManagement>
     <system>github</system>
