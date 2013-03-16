@@ -28,7 +28,7 @@ vercomp $POMVER $JSONVER
 case $? in
     0)
     echo $JSONVER == $POMVER
-    exit 0
+    exit 1
     ;;
     1)
     echo $JSONVER '<' $POMVER '(pom.xml is newer)'
