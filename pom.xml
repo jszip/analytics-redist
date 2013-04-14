@@ -25,7 +25,7 @@
 
   <groupId>org.jszip.redist</groupId>
   <artifactId>analytics</artifactId>
-  <version>0.8.11-SNAPSHOT</version>
+  <version>0.8.14-SNAPSHOT</version>
   <packaging>jszip</packaging>
 
   <name>Analytics.js</name>
@@ -61,10 +61,6 @@
     </site>
   </distributionManagement>
 
-  <properties>
-    <analytics-branch>c8eb5a0464658dfae6ae44262d158efd2b533037</analytics-branch>
-  </properties>
-
   <build>
     <plugins>
       <plugin>
@@ -72,6 +68,26 @@
         <artifactId>jszip-maven-plugin</artifactId>
         <version>0.1-alpha-9</version>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>regex-property</goal>
+            </goals>
+            <configuration>
+              <name>analytics-version</name>
+              <value>${project.version}</value>
+              <regex>^([\d\.]+)(-\d+-)?(-SNAPSHOT)?$</regex>
+              <replacement>$1</replacement>
+              <failIfNoMatch>false</failIfNoMatch>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -84,7 +100,7 @@
               <goal>download-single</goal>
             </goals>
             <configuration>
-              <url>https://raw.github.com/segmentio/analytics.js/${analytics-branch}</url>
+              <url>https://raw.github.com/segmentio/analytics.js/${analytics-version}</url>
               <fromFile>analytics.js</fromFile>
               <toFile>${project.build.outputDirectory}/analytics.js</toFile>
             </configuration>
