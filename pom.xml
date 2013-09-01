@@ -100,7 +100,7 @@
               <goal>download-single</goal>
             </goals>
             <configuration>
-              <url>https://raw.github.com/segmentio/analytics.js/v${analytics-version}</url>
+              <url>https://raw.github.com/segmentio/analytics.js/${analytics-version}</url>
               <fromFile>analytics.js</fromFile>
               <toFile>${project.build.outputDirectory}/analytics.js</toFile>
             </configuration>
